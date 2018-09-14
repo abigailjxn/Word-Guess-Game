@@ -1,2 +1,2 @@
 # Word-Guess-Game
-A Game of Hangman Between You and the Code!
+A Game of Guessing Between You and the Code!
