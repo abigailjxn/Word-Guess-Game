@@ -17,6 +17,10 @@
 // Receive input of player letter key
 // Compare player letter key to movieWord list letter
 
+// Display blanks for random movieWord array
+    // Display number of guesses based on movieWord array
+    // Letters already gussed is empty
+
 // If (letter key == any list letter && not already guessed)
     // add letter key to 'correct' array
     // display letter in UI
