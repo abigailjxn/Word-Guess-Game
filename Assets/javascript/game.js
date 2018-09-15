@@ -5,30 +5,39 @@
 // 1. Define Variables
 
 // Create array of Movies
-// Randomly Choose word to serve as game 'movieWord'
-// List letters in game 'movieWord'
-// Create variable for letter key (?)
-// Create guessCounter to be [movieword.length + 5]
+    var Movies = ["Castle In the Sky", "My Neighbor Totoro", "Kiki's Delivery Service", "Porco Rosso", "Princess Mononoke", "Spirited Away", "Howl's Moving Castle", "Ponyo", "The Wind Rises"];
+// Randomly Choose word to serve as game 'movieTitle'
+    // Create variable that generates random number between 0 and Movies - 1
+        var a = Math.floor(Math.random() * 9);
+    // Create variable for chosen word
+    var movieTitle = Movies[a]
+// List letters in game 'movieTitle'
+// Create variable for pressed key (?)
+// Create guessCounter to be [movieTitle.length + 5]
  
 
 // 2. Mechanics
 
 // GUESSING
-// Receive input of player letter key
-// Compare player letter key to movieWord list letter
+// Receive input of player pressed key
+// Compare player pressed key to movieTitle list letter
 
-// Display blanks for random movieWord array
-    // Display number of guesses based on movieWord array
+// Display blanks for random movieTitle array
+    // Display number of guesses based on movieTitle array
     // Letters already gussed is empty
 
-// If (letter key == any list letter && not already guessed)
-    // add letter key to 'correct' array
+// Include .indexOf() and .toLowerCase()
+// Make lower case -> .toLowerCase(pressed key)
+// Search string index -> movieTitle.indexOf(pressed key)??
+
+// If (pressed key == any movieTitle letter && not already guessed)
+    // add pressed key to 'correct' array
     // display letter in UI
     // continue to receive letters
     //if letter is in 'correct' or 'guessed' already, do nothing
 
-// Else If (letter key !== any list letter && not already guessed)
-    // add letter key to 'guessed'array
+// Else If (pressed key !== any list letter && not already guessed)
+    // add pressed key to 'guessed'array
     // display letter in UI
     // guessCounter-- (minus 1)
     // display counter in UI
