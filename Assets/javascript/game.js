@@ -34,14 +34,13 @@
    }
    console.log(blanks);
    mysteryMovieDiv.innerText = (blanks);
-   
+
     // Display number of guesses based on movieTitle array
-        // blahblah.innerText = 
-        // this changes the text of the doc
+    // Create guessCounter to be [movieTitle.length + 5] and attach to HTML
+    var guessCounter = document.getElementById("guesscounter");
+    guessCounter.innerText = (movieTitle.length);
+
     // Letters already guessed is empty
- 
-// Create guessCounter to be [movieTitle.length + 5] and attach to HTML
-// var guessCounter = (movieTitle.length + 5)
 
 // 2. Mechanics
 
