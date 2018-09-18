@@ -9,29 +9,43 @@
     console.log(Movies);
 // Randomly Choose word to serve as game 'movieTitle'
     // Create variable that generates random number between 0 and Movies - 1
-        var a = Math.floor(Math.random() * 9);
-        console.log(a);
+        var i = Math.floor(Math.random() * 9);
+        console.log(i);
     // Create variable for chosen word
-    var movieTitle = Movies[a]
+    var movieTitle = Movies[i]
     console.log(movieTitle);
-// List letters in game 'movieTitle'
-// Create variable for pressed key (?)
-// Create guessCounter to be [movieTitle.length + 5]
+// List lower case letters in game 'lowerMovieTitle'
+    movieTitle = movieTitle.toLowerCase();
+    console.log(movieTitle);
+
+
+// Create guessCounter to be [movieTitle.length + 5] and attached to HTML
+// var guessCounter = (movieTitle.length + 5)
+
+// Display blanks for random movieTitle array
+    // var blahblah = document.getElementByID("some element in HTML")
+    // Display number of guesses based on movieTitle array
+        // blahblah.innerText = 
+        // this changes the text of the doc
+    // Letters already guessed is empty
  
 
 // 2. Mechanics
 
 // GUESSING
 // Receive input of player pressed key
+document.onkeyup = function (event) {
+    var playerGuess = event.key;
+    console.log(playerGuess);
+
 // Compare player pressed key to movieTitle list letter
 
-// Display blanks for random movieTitle array
-    // Display number of guesses based on movieTitle array
-    // Letters already gussed is empty
+
 
 // Include .indexOf() and .toLowerCase()
 // Make lower case -> .toLowerCase(pressed key)
 // Search string index -> movieTitle.indexOf(pressed key)??
+
 
 // If (pressed key == any movieTitle letter && not already guessed)
     // add pressed key to 'correct' array
@@ -58,7 +72,8 @@
 // If strikeCoutner == 0
     // Game over display
     // reset with new word, new strikeCounter
-
+}
 // 3. Display
 
 // Perhaps this is included in the mechnics?
+
