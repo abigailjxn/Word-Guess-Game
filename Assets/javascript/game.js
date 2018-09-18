@@ -5,7 +5,7 @@
 // 1. Define Variables
 
 // Create array of Movies
-    var Movies = ["Castle In the Sky", "My Neighbor Totoro", "Kiki's Delivery Service", "Porco Rosso", "Princess Mononoke", "Spirited Away", "Howl's Moving Castle", "Ponyo", "The Wind Rises"];
+    var Movies = ["Castle" + "In" + "the" + "Sky", "My Neighbor Totoro", "Kiki's Delivery Service", "Porco Rosso", "Princess Mononoke", "Spirited Away", "Howl's Moving Castle", "Ponyo", "The Wind Rises"];
     console.log(Movies);
 // Randomly Choose word to serve as game 'movieTitle'
     // Create variable that generates random number between 0 and Movies - 1
@@ -17,18 +17,21 @@
 // List lower case letters in game 'lowerMovieTitle'
     movieTitle = movieTitle.toLowerCase();
     console.log(movieTitle);
-
-
-// Create guessCounter to be [movieTitle.length + 5] and attached to HTML
-// var guessCounter = (movieTitle.length + 5)
-
+    console.log(movieTitle.length);
 // Display blanks for random movieTitle array
+   for (j = 0; j < movieTitle.length; i++) {
     // var blahblah = document.getElementByID("some element in HTML")
+       var mysteryMovie = document.getElementById("mysteryMovie")
+       mysteryMovie.innerText = 
+   }
+   
     // Display number of guesses based on movieTitle array
         // blahblah.innerText = 
         // this changes the text of the doc
     // Letters already guessed is empty
  
+// Create guessCounter to be [movieTitle.length + 5] and attach to HTML
+// var guessCounter = (movieTitle.length + 5)
 
 // 2. Mechanics
 
