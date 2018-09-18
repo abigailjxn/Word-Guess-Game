@@ -5,7 +5,7 @@
 // 1. Define Variables
 
 // Create array of Movies
-    var Movies = ["Castle" + "In" + "the" + "Sky", "My Neighbor Totoro", "Kiki's Delivery Service", "Porco Rosso", "Princess Mononoke", "Spirited Away", "Howl's Moving Castle", "Ponyo", "The Wind Rises"];
+    var Movies = ["Castle In the Sky", "My Neighbor Totoro", "Kiki's Delivery Service", "Porco Rosso", "Princess Mononoke", "Spirited Away", "Howl's Moving Castle", "Ponyo", "The Wind Rises"];
     console.log(Movies);
 // Randomly Choose word to serve as game 'movieTitle'
     // Create variable that generates random number between 0 and Movies - 1
@@ -18,12 +18,22 @@
     movieTitle = movieTitle.toLowerCase();
     console.log(movieTitle);
     console.log(movieTitle.length);
+    console.log(movieTitle[0]);
+
+// var blahblah = document.getElementByID("some element in HTML")
+    var mysteryMovieDiv = document.getElementById("mysterymovie");
+
+    var blanks = "";
 // Display blanks for random movieTitle array
-   for (j = 0; j < movieTitle.length; i++) {
-    // var blahblah = document.getElementByID("some element in HTML")
-       var mysteryMovie = document.getElementById("mysteryMovie")
-       mysteryMovie.innerText = 
+   for (j = 0; j < movieTitle.length; j++) {
+        blanks += "-";
+        // sort out spaces
+        // if (movieTitle[i] === "" ) {
+        //     console.log("it's a space");
+        // }
    }
+   console.log(blanks);
+   mysteryMovieDiv.innerText = (blanks);
    
     // Display number of guesses based on movieTitle array
         // blahblah.innerText = 
