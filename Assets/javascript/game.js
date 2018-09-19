@@ -27,7 +27,6 @@
         blanks += "-";
         mysteryMovieDiv.innerText = (blanks);
     }
-    console.log(blanks);
     // Display number of guesses based on movieTitle array
     // Create guessCounter to be [movieTitle.length + 5] and attach to HTML
     var guessCounter = document.getElementById("guesscounter");
@@ -53,27 +52,23 @@ console.log(guessWrong);
 
 // If (pressed key == any movieTitle letter && not already guessed)
 for (j = 0; j < movieTitle.length; j++) {
-    blanks += "-";
-    mysteryMovieDiv.innerText = (blanks);
+    blanks[j] = movieTitle.charAt(j);
     if ((movieTitle.indexOf(playerGuess) !== -1) && (playerGuess == movieTitle.charAt(j))) {
         console.log ("it's a match"); 
+        (movieTitle.charAt(j)).replace(playerGuess);
+        blanks[j].replace(playerGuess);
+        blanks[j].innerText;
+        console.log(movieTitle.charAt(j));
        
     }
-    // sort out spaces
+    // ignore spaces?
     // if (movieTitle[i] === "" ) {
     //     console.log("it's a space");
     // }
+    
 }
 
-
-
-
-
-
-
 // If Player Guess IS a character in the string array (and therefore not -1), then there is a character that matches
-
-    
     // display letter in UI
     // continue to receive letters
     //if letter is in 'correct' or 'guessed' already, do nothing
