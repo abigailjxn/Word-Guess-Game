@@ -1,9 +1,50 @@
+body {
+    background-color: #f2e8c2;
+}
 header {
-
+    width: 100%;
 }
 
-h1 {
+.headerimg {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
 
+header h1 {
+    display: block;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 55px;
+}
+
+.container {
+    width: 66.666666666%;
+    height: auto;
+    border: 3px dashed #c2db93;
+    margin: 2% auto;
+    
+}
+
+.column {
+    width: 100%;
+    height: auto;
+}
+
+#mysterymovie {
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    letter-spacing: .3em;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-bottom: 3px dashed #c2db93;
+}
+
+.column-2 {
+    width: 50%;
+    height: 100%;
+    align: left;
 }
 
 h2 {
