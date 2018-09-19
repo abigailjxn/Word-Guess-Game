@@ -29,8 +29,9 @@ for (j = 0; j < movieTitle.length; j++) {
 }
 // Display number of guesses based on movieTitle array
 // Create guessCounter to be [movieTitle.length + 5] and attach to HTML
-var guessCounter = document.getElementById("guesscounter");
-guessCounter.innerText = (movieTitle.length + 5);
+var guessCounterDisplay = document.getElementById("guesscounter");
+// console.log("guessCounter", guessCounter);
+guessCounterDisplay.innerText = (movieTitle.length + 5);
 guessCounter = movieTitle.length + 5;
 console.log(guessCounter);
 
@@ -60,6 +61,8 @@ document.onkeyup = function (event) {
             blanks[j].innerText;
             console.log(movieTitle.charAt(j));
 
+            // if no dashes left then win 
+
         }
         // ignore spaces?
         // if (movieTitle[i] === "" ) {
@@ -71,8 +74,8 @@ document.onkeyup = function (event) {
         console.log(guessWrong);
         guessCounter -= 1;
         console.log(guessCounter);
-        guessWrongDisplay.innerHTML = guessWrong;
-        
+        guessWrongDisplay.innerText = guessWrong;
+        guessCounterDisplay.textContent = guessCounter;
     }
 
 }
