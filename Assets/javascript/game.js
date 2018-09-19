@@ -22,24 +22,16 @@
 
 // var blahblah = document.getElementByID("some element in HTML")
     var mysteryMovieDiv = document.getElementById("mysterymovie");
-
     var blanks = "";
-// Display blanks for random movieTitle array
-   for (j = 0; j < movieTitle.length; j++) {
+    for (j = 0; j < movieTitle.length; j++) {
         blanks += "-";
-
-        // sort out spaces
-        // if (movieTitle[i] === "" ) {
-        //     console.log("it's a space");
-        // }
-   }
-   console.log(blanks);
-   mysteryMovieDiv.innerText = (blanks);
-
+        mysteryMovieDiv.innerText = (blanks);
+    }
+    console.log(blanks);
     // Display number of guesses based on movieTitle array
     // Create guessCounter to be [movieTitle.length + 5] and attach to HTML
     var guessCounter = document.getElementById("guesscounter");
-    guessCounter.innerText = (movieTitle.length);
+    guessCounter.innerText = (movieTitle.length + 5);
 
     // Letters already guessed is empty
 
@@ -54,38 +46,54 @@ document.onkeyup = function (event) {
 // Connect Wrong Player Letters to DOM and create array to hold the letters
 var guessWrongDisplay = document.getElementById("guessedwrong");
 var guessWrong = [];
+
 console.log(guessWrong);
 
 // Compare player pressed key to movieTitle list letter
 
 // If (pressed key == any movieTitle letter && not already guessed)
+for (j = 0; j < movieTitle.length; j++) {
+    blanks += "-";
+    mysteryMovieDiv.innerText = (blanks);
+    if ((movieTitle.indexOf(playerGuess) !== -1) && (playerGuess == movieTitle.charAt(j))) {
+        console.log ("it's a match"); 
+       
+    }
+    // sort out spaces
+    // if (movieTitle[i] === "" ) {
+    //     console.log("it's a space");
+    // }
+}
+
+
+
+
+
+
+
 // If Player Guess IS a character in the string array (and therefore not -1), then there is a character that matches
-if (movieTitle.indexOf(playerGuess) !== -1) {
-    // Correct condition
-    // if player guess key equals a particular character
-    if (playerGuess == movieTitle.charAt(j)){
-        console.log("closer");
-    // add pressed key to 'correct' array OR replace dash position with letter
+
+    
     // display letter in UI
     // continue to receive letters
     //if letter is in 'correct' or 'guessed' already, do nothing
     }
-}
+// }
 //Incorrect condition
 // Else If (pressed key !== any list letter && not already guessed)
-else {
-    // for (k = 0; k > guessCounter; k--){
-        // add pressed key to 'guessWrong'array
-        guessWrong.push(playerGuess);
-        console.log(guessWrong);
-        // display letter in UI
-        guessWrongDisplay.innerHTML = guessWrong;
-        // guessCounter-- (minus 1)
-        guessCounter--;
-        // add guesses in array to each other and have it appear in UI
-    // guessWrong.appendChild(guessWrong); S
-    // }
-}
+// else {
+//     // for (k = 0; k > guessCounter; k--){
+//         // add pressed key to 'guessWrong'array
+//         guessWrong.push(playerGuess);
+//         console.log(guessWrong);
+//         // display letter in UI
+//         guessWrongDisplay.innerHTML = guessWrong;
+//         // guessCounter-- (minus 1)
+//         guessCounter--;
+//         // add guesses in array to each other and have it appear in UI
+//     // guessWrong.appendChild(guessWrong); S
+//     // }
+// }
  
     // If letter key is in 'correct' or 'guessed' already, do nothing
 
@@ -101,7 +109,7 @@ else {
 // If strikeCoutner == 0
     // Game over display
     // reset with new word, new strikeCounter
-}
+// }
 // 3. Display
 
 // Perhaps this is included in the mechnics?
