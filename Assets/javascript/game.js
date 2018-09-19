@@ -27,6 +27,7 @@
 // Display blanks for random movieTitle array
    for (j = 0; j < movieTitle.length; j++) {
         blanks += "-";
+
         // sort out spaces
         // if (movieTitle[i] === "" ) {
         //     console.log("it's a space");
@@ -49,31 +50,43 @@
 document.onkeyup = function (event) {
     var playerGuess = event.key;
     console.log(playerGuess);
-var guessWrong = document.getElementById("guessedwrong");
+
+// Connect Wrong Player Letters to DOM and create array to hold the letters
+var guessWrongDisplay = document.getElementById("guessedwrong");
 var guessWrong = [];
 console.log(guessWrong);
+
 // Compare player pressed key to movieTitle list letter
-if 
-    console.log("it's here!");
-}
-
-
-// Include .indexOf() and .toLowerCase()
-// Make lower case -> .toLowerCase(pressed key)
-// Search string index -> movieTitle.indexOf(pressed key)??
-
 
 // If (pressed key == any movieTitle letter && not already guessed)
+// If Player Guess IS a character in the string array (and therefore not -1), then there is a character that matches
+if (movieTitle.indexOf(playerGuess) !== -1) {
+    // Correct condition
+    // if player guess key equals a particular character
+    if (playerGuess == movieTitle.charAt(j)){
+        console.log("closer");
     // add pressed key to 'correct' array OR replace dash position with letter
     // display letter in UI
     // continue to receive letters
     //if letter is in 'correct' or 'guessed' already, do nothing
-
+    }
+}
+//Incorrect condition
 // Else If (pressed key !== any list letter && not already guessed)
-    // add pressed key to 'guessed'array
-    // display letter in UI
-    // guessCounter-- (minus 1)
-    // display counter in UI
+else {
+    // for (k = 0; k > guessCounter; k--){
+        // add pressed key to 'guessWrong'array
+        guessWrong.push(playerGuess);
+        console.log(guessWrong);
+        // display letter in UI
+        guessWrongDisplay.innerHTML = guessWrong;
+        // guessCounter-- (minus 1)
+        guessCounter--;
+        // add guesses in array to each other and have it appear in UI
+    // guessWrong.appendChild(guessWrong); S
+    // }
+}
+ 
     // If letter key is in 'correct' or 'guessed' already, do nothing
 
 // Else strikeCounter == 0
