@@ -60,7 +60,7 @@ document.onkeyup = function (event) {
 
 
 // If (pressed key == any movieTitle letter && not already guessed)
-    // add pressed key to 'correct' array
+    // add pressed key to 'correct' array OR replace dash position with letter
     // display letter in UI
     // continue to receive letters
     //if letter is in 'correct' or 'guessed' already, do nothing
