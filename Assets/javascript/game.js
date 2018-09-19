@@ -49,9 +49,13 @@
 document.onkeyup = function (event) {
     var playerGuess = event.key;
     console.log(playerGuess);
-
+var guessWrong = document.getElementById("guessedwrong");
+var guessWrong = [];
+console.log(guessWrong);
 // Compare player pressed key to movieTitle list letter
-
+if 
+    console.log("it's here!");
+}
 
 
 // Include .indexOf() and .toLowerCase()
