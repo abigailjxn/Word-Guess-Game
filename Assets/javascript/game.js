@@ -26,7 +26,6 @@ var blanks = "";
 for (j = 0; j < movieTitle.length; j++) {
     blanks += "-";
     mysteryMovieDiv.innerText = (blanks);
-    console.log("blank0", blanks[0]);
 }
 // Display number of guesses based on movieTitle array
 // Create guessCounter to be [movieTitle.length + 5] and attach to HTML
@@ -47,7 +46,7 @@ document.onkeyup = function (event) {
     // Connect Wrong Player Letters to DOM and create array to hold the letters
     var guessWrongDisplay = document.getElementById("guessedwrong");
     var guessWrong = [];
-
+    var guessRightArray = [];
     console.log(guessWrong);
 
     // Compare player pressed key to movieTitle list letter
@@ -58,18 +57,22 @@ document.onkeyup = function (event) {
         blanks[j] = movieTitle.charAt(j);
         if ((movieTitle.indexOf(playerGuess) !== -1) && (playerGuess == movieTitle.charAt(j))) {
             console.log("it's a match");
-            movieTitle.charAt(j).replace(playerGuess);
+            guessRightArray.push(playerGuess);
+            console.log(guessRightArray);
+            guessRight = movieTitle[j].replace(blanks[j], playerGuess);
+            console.log(guessRight);
+            // movieTitle.charAt(j).replace(playerGuess);
             //mysteryMovieDiv.innerText = (playerGuess);
-            blanks[j] = playerGuess;
-            console.log(blanks[j]);
+            // blanks[j] = playerGuess;
+            // console.log(blanks[j]);
             //blanks[j].innerText = playerGuess;
-            mysteryMovieDiv.innerText = blanks[j];
+            mysteryMovieDiv.innerText = guessRight;
             console.log(movieTitle.charAt(j));
 
             // if no dashes left then win 
 
         }
-        // ignore spaces?
+        // ignore spaces and puncutation?
         // if (movieTitle[i] === "" ) {
         //     console.log("it's a space");
         // }
@@ -79,11 +82,12 @@ document.onkeyup = function (event) {
         console.log(guessWrong);
         guessCounter -= 1;
         console.log(guessCounter);
-        guessWrongDisplay.innerText = guessWrong;
+        guessWrongDisplay.innerText += guessWrong;
         guessCounterDisplay.textContent = guessCounter;
     }
     else if ((movieTitle.indexOf(playerGuess) === -1 && (guessCounter === 0))){
         alert("Try again!");
+
         //reset the game
     }
 
