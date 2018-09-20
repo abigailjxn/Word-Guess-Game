@@ -59,7 +59,7 @@ document.onkeyup = function (event) {
             console.log("it's a match");
             guessRightArray.push(playerGuess);
             console.log(guessRightArray);
-            guessRight = movieTitle[j].replace(blanks[j], playerGuess);
+            var guessRight = movieTitle[j].replace(blanks[j], playerGuess);
             console.log(guessRight);
             // movieTitle.charAt(j).replace(playerGuess);
             //mysteryMovieDiv.innerText = (playerGuess);
