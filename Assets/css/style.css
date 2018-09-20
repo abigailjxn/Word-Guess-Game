@@ -23,6 +23,8 @@ header h1 {
     height: auto;
     border: 3px dashed #c2db93;
     margin: 2% auto;
+    content: space-between;
+    flex-wrap: wrap;
     
 }
 
@@ -40,15 +42,41 @@ header h1 {
     border-bottom: 3px dashed #c2db93;
 }
 
+.row-2 {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
 .column-2 {
     width: 50%;
     height: 100%;
+    flex-basis: 50%;
+    /* float: left; */
+    margin: 3% 0;
+    text-align: center;
+
+}
+
+.column-2 h1 {
+    text-align: center;
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+#photocolumn {
+    border-right: 3px dashed #c2db93;
 }
 
 h2 {
     font-size: 28px;
+    margin-bottom: 10px;
 }
 
 h3 {
     font-size: 25px;
+    margin-bottom: 10px;
 }
+
+
